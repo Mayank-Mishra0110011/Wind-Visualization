@@ -54,6 +54,7 @@ window.onload = function() {
     };
 
     function clicked(d) {
+        console.log(d.id)
         let x, y, zoomLevel;
         if (!zoomSettings.zommedIn) {
             const centroid = path.centroid(d);
@@ -271,51 +272,51 @@ window.onload = function() {
             feature.style('fill', beufortScale.calm);
         }
         else 
-        if (windSpeed >= 2 && windSpeed <= 5) {
+        if (windSpeed >= 2 && windSpeed < 5) {
             feature.style('fill', beufortScale.lightAir);
         }
         else 
-        if (windSpeed >= 6 && windSpeed <= 11) {
+        if (windSpeed >= 5 && windSpeed < 11) {
             feature.style('fill', beufortScale.lightBreeze);
         }
         else 
-        if (windSpeed >= 12 && windSpeed <= 19) {
+        if (windSpeed >= 11 && windSpeed < 19) {
             feature.style('fill', beufortScale.gentleBreeze);
         }
         else 
-        if (windSpeed >= 20 && windSpeed <= 28) {
+        if (windSpeed >= 19 && windSpeed < 28) {
             feature.style('fill', beufortScale.moderateBreeze);
         }
         else 
-        if (windSpeed >= 29 && windSpeed <= 38) {
+        if (windSpeed >= 28 && windSpeed < 38) {
             feature.style('fill', beufortScale.freshBreeze);
         }
         else 
-        if (windSpeed >= 39 && windSpeed <= 49) {
+        if (windSpeed >= 38 && windSpeed < 49) {
             feature.style('fill', beufortScale.strongBreeze);
         }
         else 
-        if (windSpeed >= 50 && windSpeed <= 61) {
+        if (windSpeed >= 49 && windSpeed < 61) {
             feature.style('fill', beufortScale.nearGale);
         }
         else 
-        if (windSpeed >= 62 && windSpeed <= 74) {
+        if (windSpeed >= 61 && windSpeed < 74) {
             feature.style('fill', beufortScale.gale);
         }
         else 
-        if (windSpeed >= 75 && windSpeed <= 88) {
+        if (windSpeed >= 74 && windSpeed < 88) {
             feature.style('fill', beufortScale.severeGale);
         }
         else 
-        if (windSpeed >= 89 && windSpeed <= 102) {
+        if (windSpeed >= 88 && windSpeed < 102) {
             feature.style('fill', beufortScale.storm);
         }
         else 
-        if (windSpeed >= 103 && windSpeed <= 117) {
+        if (windSpeed >= 102 && windSpeed < 117) {
             feature.style('fill', beufortScale.violentStorm);
         }
         else 
-        if (windSpeed > 118) {
+        if (windSpeed >= 117) {
             feature.style('fill', beufortScale.hurricaneForce);
         }
     }
